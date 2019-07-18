@@ -4,9 +4,12 @@
   "author": "6du",
   "description": "LiveScript loader module for webpack and Vue",
   "scripts": {
-    "prepublish": "lsc -cb ./index.ls"
+    "dev": "lsc -cbw .",
+    "prepublishOnly": "lsc -cb ./index.ls"
   },
   "dependencies": {
+    "livescript-compiler": "^0.1.1",
+    "livescript-transform-esm": "^3.0.1",
     "loader-utils": "1.2.x"
   },
   "peerDependencies": {

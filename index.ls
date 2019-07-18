@@ -1,7 +1,14 @@
 require! {
-  'livescript': LS
+  'livescript'
+  'livescript/lib/lexer'
+  'livescript-compiler/lib/livescript/Compiler'
   'loader-utils': Utils
+  'livescript-transform-esm/lib/plugin':Esm
 }
+
+compiler = Compiler.__default__.create livescript: livescript with {lexer}
+Esm.__default__.install(compiler)
+
 
 module.exports = (source) ->
   @cacheable?!
@@ -26,7 +33,7 @@ module.exports = (source) ->
   config <<< query
 
   try
-    result = LS.compile(source, config)
+    result = compiler.compile(source, config)
   catch e
     err = ''
     unless (e.location?.first_column? or e.location?.first_line?)
