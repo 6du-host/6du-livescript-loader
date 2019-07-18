@@ -1,4 +1,4 @@
-# vue-livescript-loader
+# hack-livescript-loader
 
 ## Usage
 
