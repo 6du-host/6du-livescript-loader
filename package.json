@@ -1,7 +1,7 @@
 {
-  "name": "vue-livescript-loader",
+  "name": "hack-livescript-loader",
   "version": "0.0.1-0",
-  "author": "Johan Borestad",
+  "author": "6du",
   "description": "LiveScript loader module for webpack and Vue",
   "scripts": {
     "dist": "lsc -cb ./index.ls"
@@ -14,6 +14,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/borestad/vue-livescript-loader.git"
+    "url": "git@github.com:6du-host/vue-cli-plugin-livescript.git"
   }
 }
