@@ -3,11 +3,19 @@ require! {
   'livescript/lib/lexer'
   'livescript-compiler/lib/livescript/Compiler'
   'loader-utils': Utils
-  'livescript-transform-esm/lib/plugin':Esm
 }
 
 compiler = Compiler.__default__.create livescript: livescript with {lexer}
-Esm.__default__.install(compiler)
+
+do ->
+  for i in <[
+    object-create
+    esm
+    implicit-async
+  ]>
+    require(
+      "livescript-transform-#{i}/lib/plugin"
+    ).__default__.install(compiler)
 
 
 module.exports = (source) ->

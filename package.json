@@ -1,6 +1,6 @@
 {
   "name": "6du-livescript-loader",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "6du",
   "description": "LiveScript loader module for webpack and Vue",
   "scripts": {
@@ -10,6 +10,8 @@
   "dependencies": {
     "livescript-compiler": "^0.1.1",
     "livescript-transform-esm": "^3.0.1",
+    "livescript-transform-implicit-async": "^1.1.0",
+    "livescript-transform-object-create": "^1.1.0",
     "loader-utils": "1.2.x"
   },
   "peerDependencies": {
