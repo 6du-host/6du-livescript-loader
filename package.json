@@ -1,5 +1,5 @@
 {
-  "name": "hack-livescript-loader",
+  "name": "6du-livescript-loader",
   "version": "0.0.1-0",
   "author": "6du",
   "description": "LiveScript loader module for webpack and Vue",
